@@ -1,0 +1,30 @@
+namespace ejercicio5_en_clase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ejercicio 5");
+            int[] A = { 6, 7, 10, 15, 30, 3, 9, 45, 2, 40};
+            int min = 10000;
+            int max = 0;
+            
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(A[i]);
+                if (A[i] < min)
+                {
+                    min = A[i];
+                }
+                if (A[i] > max)
+                {
+                    max = A[i];
+                }
+
+            }
+
+            Console.Write("El máximo valor es : " + max + "\n");
+            Console.Write("El mínimo valor es : " + min + "\n");
+        }
+    }
+}
