@@ -1,0 +1,53 @@
+    class Program
+    {
+        static void Main(string[] args)
+        {
+                int n, m;
+                int mayor, menor;
+                n = 1;
+                Console.WriteLine("ingrese la cantidad de numeros");
+                m = int.Parse(Console.ReadLine());
+                int[,] a = new int[n, m];
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < m; j++)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("ingresa numero["+ "," + j + "]");
+                        a[i, j] = int.Parse(Console.ReadLine());
+                    }
+                }
+                Console.Clear();
+                Console.WriteLine("Los elementos de la matriz son:");
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine("  ");
+                    for (int j = 0; j < m; j++)
+                    {
+                        Console.Write("  " + a[i, j]);
+                    }
+                }
+                Console.WriteLine(" ");
+                mayor = menor = a[0, 0];
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < m; j++)
+                    {
+                        if (a[i, j] < menor)
+                        {
+                            menor = a[i, j];
+                        }
+                        else
+                            if (a[i, j] > mayor)
+                        {
+                            mayor = a[i, j];
+                        }
+                    }
+                }
+                Console.WriteLine("MAXIMO :" + mayor);
+                Console.WriteLine("MINIMO :" + menor);
+                Console.ReadLine();
+            }
+        }
+    }
+
